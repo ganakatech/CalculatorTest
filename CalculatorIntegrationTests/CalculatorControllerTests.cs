@@ -13,20 +13,17 @@ public class CalculatorControllerTests : IClassFixture<WebApplicationFactory<Pro
     }
 
     [Fact]
-    public async Task Get_Addition_ShouldReturnCorrectResult()
+    public async Task Get_Subtract_ShouldReturnCorrectResult()
     {
         // Arrange
-        var request = new { FirstNumber = 2, SecondNumber = 3 };
-        var content = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
-
         // Act
-        var response = await _client.GetAsync("api/calculator/add?FirstNumber=2&SecondNumber=3");
+        var response = await _client.GetAsync("api/calculator/subtract?start=3&amount=3");
         response.EnsureSuccessStatusCode();
         var responseString = await response.Content.ReadAsStringAsync();
         var result = double.Parse(responseString);
 
         // Assert
-        Assert.Equal(5, result);
+        Assert.Equal(0, result);
     }
 
 }

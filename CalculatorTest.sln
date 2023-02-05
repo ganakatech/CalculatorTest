@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorConsole", "Calcul
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorWebAPI", "CalculatorWebAPI\CalculatorWebAPI.csproj", "{A0FAD385-7AA2-4914-97A2-9081C4828D83}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorIntegrationTests", "CalculatorIntegrationTests\CalculatorIntegrationTests.csproj", "{51ECBDC3-FA22-4E95-B81C-A45DFBD5652C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{A0FAD385-7AA2-4914-97A2-9081C4828D83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0FAD385-7AA2-4914-97A2-9081C4828D83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0FAD385-7AA2-4914-97A2-9081C4828D83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51ECBDC3-FA22-4E95-B81C-A45DFBD5652C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51ECBDC3-FA22-4E95-B81C-A45DFBD5652C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51ECBDC3-FA22-4E95-B81C-A45DFBD5652C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51ECBDC3-FA22-4E95-B81C-A45DFBD5652C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
