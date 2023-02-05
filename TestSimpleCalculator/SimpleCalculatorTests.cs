@@ -204,12 +204,15 @@ public class SimpleCalculatorTests
     [Test]
     public void Add_ValidInput_DiagnosticsCalledWithExpectedValues()
     {
+        // Arrange
         int start = 2, amount = 3;
         int expectedResult = start + amount;
         string expectedMethodName = nameof(_simpleCalculator.Add);
 
+        // Act
         int result = _simpleCalculator!.Add(start, amount);
 
+        // Assert
         _diagnosticsMock!.Verify(d => d.LogResult(expectedMethodName, expectedResult), Times.Once());
         Assert.That(result, Is.EqualTo(expectedResult));
     }
@@ -217,12 +220,15 @@ public class SimpleCalculatorTests
     [Test]
     public void Subtract_ValidInput_DiagnosticsCalledWithExpectedValues()
     {
+        // Arrange
         int start = 7, amount = 3;
         int expectedResult = start - amount;
         string expectedMethodName = nameof(_simpleCalculator.Subtract);
 
+        // Act
         int result = _simpleCalculator!.Subtract(start, amount);
 
+        // Assert
         _diagnosticsMock!.Verify(d => d.LogResult(expectedMethodName, expectedResult), Times.Once());
         Assert.That(result, Is.EqualTo(expectedResult));
     }
@@ -230,12 +236,15 @@ public class SimpleCalculatorTests
     [Test]
     public void Multiply_ValidInput_DiagnosticsCalledWithExpectedValues()
     {
+        // Arrange
         int start = 2, by = 3;
         int expectedResult = start * by;
         string expectedMethodName = nameof(_simpleCalculator.Multiply);
 
+        // Act
         int result = _simpleCalculator!.Multiply(start, by);
 
+        // Assert
         _diagnosticsMock!.Verify(d => d.LogResult(expectedMethodName, expectedResult), Times.Once());
         Assert.That(result, Is.EqualTo(expectedResult));
     }
@@ -243,12 +252,15 @@ public class SimpleCalculatorTests
     [Test]
     public void Divide_ValidInput_DiagnosticsCalledWithExpectedValues()
     {
+        // Arrange
         int start = 10, by = 2;
         int expectedResult = start / by;
         string expectedMethodName = nameof(_simpleCalculator.Divide);
 
+        // Act
         int result = _simpleCalculator!.Divide(start, by);
 
+        // Assert
         _diagnosticsMock!.Verify(d => d.LogResult(expectedMethodName, expectedResult), Times.Once());
         Assert.That(result, Is.EqualTo(expectedResult));
     }
